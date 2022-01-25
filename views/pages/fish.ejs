@@ -1,0 +1,31 @@
+<%-include('../partials/head.ejs')%>
+
+<body>
+    <header>
+        <%-include('../partials/nav.ejs')%>
+        <div class="header fish">
+            <h1>Fish</h1>
+        </div>
+    </header>
+    <main>
+        <div class="dish-page">
+            <% items.forEach((item)=> { %>
+            <div class="dish">
+                <img src="<%= item.imgUrl %>" />
+                <div class="description">
+                    <h3><%= item.name %></h3>
+                    <p><%= item.description %></p>
+                    <button class="dish-btn" data-name="<%= item.name%>" data-img="<%= item.imgUrl %>"
+                        data-description="<%= item.description %>">Add to table</button>
+                </div>
+            </div>
+
+            <% }); %>
+            <%-include('../partials/back_link.ejs')%>
+        </div>
+    </main>
+    <%-include('../partials/footer.ejs')%>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

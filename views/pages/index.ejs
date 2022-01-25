@@ -1,0 +1,24 @@
+<%- include('../partials/head.ejs') %>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header">
+                <h1><%=pageName%></h1>
+            </div>
+            <%- include('../partials/nav.ejs') %>
+        </header>
+        <main>
+            <div class="savory category">
+                <h2 class="title"><a href="/savory">Savory</a></h2>
+            </div>
+            <div class="sweet category">
+                <h2 class="title"><a href="/sweet">Sweet</a></h2>
+            </div>
+        </main>
+        <%- include('../partials/footer.ejs') %>
+    </div>
+
+</body>
+
+</html>
